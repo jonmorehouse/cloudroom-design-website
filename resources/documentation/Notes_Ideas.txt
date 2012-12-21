@@ -1,0 +1,35 @@
+****PORTFOLIO PAGE*******
+
+-SEVERAL THUMBNAILS
+
+-on hover it will change the content section...
+-on click goes to a link
+.content show on hover
+	-hide first content
+	-replace the second with the content!
+	
+*DISCOVERIES*
+	-you can pass a single variable from one view to another
+		-has to do with the class inheritance from view to controller etc..
+
+*DECISIONS*
+	-bumpbox vs external page for CloudRoomLLC and CloudRoomDesign
+	-facebook/twitter/linkedin api integration
+	-NEW FONT! THE STEINER FONT HAS A BIT OF LAG!!!!!!
+	-Idea of having the logos on the bottom at first?--then have them animate up to the left sidee...
+	
+*THINGS TO IMPLEMENT*
+	-box shadow mixin--use variables here!
+	-need to fix the javascript about_box so that it doesn't overlap on anything!
+
+*FUTURE DEVELOPMENT NOTES*
+	-echo the base_url as a javascript variable in the header!
+		-now the variable is available in all js files!
+	-be careful about wasting time with the dotcloud ssh-changes aren't immediate...
+	-use this nginx.conf
+
+*IMAGE MANIPULATION**
+
+5-4 ratio 302x240 is sample...
+
+**NEED TO FIGURE OUT A BETTER WAY TO DO SOMETHING LIKE THE 'FIRST CLICK'**

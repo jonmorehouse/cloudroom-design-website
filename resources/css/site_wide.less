@@ -1,0 +1,323 @@
+@import "variables.less";
+@import "mixins.less";
+
+/*FONT*/
+
+@font-face {font-family: steiner; src: url('fonts/steiner.ttf'); } 
+@font-face {font-family: web_serveroff; src: url('fonts/web_serveroff.ttf');}
+
+
+/*ELEMENT STYLING */
+body{
+	overflow:hidden;
+	list-style-type:none;
+	a{
+		position:absolute;
+		text-decoration:none;
+		&:hover{
+			text-decoration:none;
+		}
+		&:active{
+			text-decoration:none;
+		}
+		&:visited{
+			text-decoration:none;
+		}
+		img{border:0; border:none;}/*THIS IS IMPORTANT FOR IE BECAUSE OF THE LOGOS!*/
+	}
+}
+
+#background_slideshow{
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+
+	.slide{
+		position:absolute;
+		left:-20%;
+		top:-20%;
+		height:120%;
+		width:120%;
+		img{
+			height:100%;
+			width:100%;
+			}
+		}
+}
+
+#top{
+	.border_style;
+	top:0;
+	height:@border_width;
+	left:@border_width*0.5;
+	right:@border_width*0.5;
+}
+
+#left{
+	.border_style;
+	top:0;
+	left:0;
+	width:@border_width*0.5;
+	height:100%;
+}
+
+#right{
+	.border_style;
+	top:0;
+	right:0;
+	width:@border_width*0.5;
+	height:100%;
+}
+
+#bottom{
+	.border_style;
+	bottom:0;
+	height:@border_width;
+	left:@border_width*0.5;
+	right:@border_width*0.5;
+}
+
+#navigation_bar{
+	@nav_width: 20%;
+	@nav_height:100px;
+	font-family:steiner, helvetica;
+	width:80%;
+	height:100px;
+	position:absolute;
+	top:@border_width;
+	right:@border_width*0.5;
+	font-size:0.95em;
+	
+	li{
+		.dark_background(@opacity);
+		position:relative;
+		float:right;
+		width:@nav_width;
+		display:block;
+		margin-left:2px;
+		padding-bottom:4px;
+		
+		.box_shadow(@shadow);
+		
+		&:hover{
+			.dark_background(1);
+			box-shadow:none;
+		}
+		
+		&:last-child{
+			border-bottom-left-radius:20%;
+			
+		}
+		
+		&:first-child{
+			margin:none;
+		}
+		
+		a{
+			position:relative;
+			color:white;
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			width:100%;
+			vertical-align:middle;
+			text-align:center;
+			margin:0 auto;
+			padding-top:15px;
+			padding-bottom:15px;
+			cursor:pointer;
+		}
+		
+		li:first-child{
+			
+			margin-right:0;
+		}
+	
+		li:last-child{
+			border-bottom-left-radius:20%;
+		}
+	}	
+}
+
+#logo{
+	z-index:10;
+	position:fixed;
+	top:@border_width;
+	left:@border_width*0.5;
+	width:@logo_width;
+	max-height:150px;
+	a{
+		.light_background(@opacity);
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		border-bottom-right-radius:20%;
+		.box_shadow(@shadow);
+		img{
+			max-height:95%;
+			max-width:95%;
+			margin-left:2%;
+			margin-top:2%;
+			}
+	}		
+}
+
+#about_box{
+		position:relative;
+		width:90%;/*THIS IS 210 BECAUSE WHEN TESTING IN SUPER WIDE SCREENS THIS COULD BE A PROBLEM*/
+		top:220px;
+		left:@border_width;
+
+		div{
+			max-width:200px;
+			display:none;
+			position:absolute;
+			top:0px;
+			padding:10px;
+			.dark_background(@opacity);
+			border-radius:20%;
+			.content_font(@size);
+			font-size:1.0em;
+		}
+}
+
+#contact{
+	/*VARIABLES*/
+	@border_radius: 20px;
+	
+	/*CONTACT_WIDE CSS*/
+	z-index:10;
+	position:fixed;
+	bottom:@border_width;
+	right:@border_width*0.5;
+	clear:both;
+
+	/*TRIGGER IS THE BOTTOM CORNER BUTTON*/
+	.trigger{
+		width:10px;
+		text-align:middle;
+		float:right;
+		cursor:pointer;
+		padding:20px;
+		.dark_background(@opacity);
+		.font(100%);
+		border-top-left-radius:20%;
+		&:hover{
+			.dark_background(1.0);
+		}
+	
+		span{
+			margin-left:10%;
+		}
+	}
+	
+	/*CONTACT IS THE CURRENT WINDOW BUMPBOX*/
+	.contact{
+		text-align:center;
+		position:absolute;
+		right:50px;
+		display:none;
+		bottom:0;
+		letter-spacing:2px;
+		border:2px solid @shadow;
+		border-bottom:0px;
+		.font(100%);
+		.dark_background(@opacity);
+		padding:20px;
+		padding-top:0;
+		height:@contact_height;
+		width:@contact_width;
+		border-top-right-radius:10%;
+		border-top-left-radius:10%;
+				
+		a{
+			color:white;
+		}
+
+		/*TABS ARE THE LOGOS THAT CHANGE THE CONTACT SYSTEM*/
+		.tab{
+			position:absolute;
+			left:-@tab_width;
+			bottom:0;
+			width:@tab_width;
+			li{
+				position:relative;
+				margin-right:2px;
+				border-top-left-radius:@border_radius;
+				border-bottom-left-radius:@border_radius;
+				padding:4px;
+				height:52px;
+				cursor:pointer;
+				display:block;
+				margin-bottom:3px;
+				.light_background(0.5);
+				
+				img{
+					max-height:100%;
+					}
+		
+				&:hover{
+					left:-8px;
+					.light_background(0);
+
+					}
+			}
+		}
+		
+		.current{
+			left:-8px;
+			.light_background(0);
+		}
+	
+		input{
+			border:2px solid @shadow;
+			position:absolute;
+			right:20%;
+			left:20%;
+			width:@contact_width*0.6;
+		}
+	
+		textarea{
+			border:2px solid @shadow;
+			position:absolute;
+			right:20%;
+			left:20%;
+			width:@contact_width*0.6;
+			resize:none;
+		}
+	
+		.submit{
+			border:2px solid @shadow;
+			cursor:pointer;
+			padding:1%;
+			padding-top:1.5%;
+			border-radius:20px;
+
+			position:absolute;
+			left:10%;
+			right:10%;
+			.light_background(0.5);
+			&:hover{
+				color:black;
+				.light_background(1.0);
+			}
+		}
+
+		.content{
+		
+			.facebook{
+				.facebook_wrapper{
+					.light_background(0.7);
+					padding:10%;
+					border-radius:5%;
+				}
+			}
+		}
+	
+	}
+	
+}
