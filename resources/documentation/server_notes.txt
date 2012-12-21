@@ -1,5 +1,0 @@
-301 redirect
-dns redirect from .com to www 
-301 from christie lee and ChristieLee to Christie_Lee
-	same for jon
-	
