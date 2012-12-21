@@ -1,0 +1,9 @@
+location ~ /system/.* {
+    deny all;
+}
+
+location ~ /application/.* {
+    deny all;
+}
+
+try_files $uri $uri/ /index.php?$args;

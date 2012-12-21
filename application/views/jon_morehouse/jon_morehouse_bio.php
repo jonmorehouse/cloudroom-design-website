@@ -1,5 +1,5 @@
 <div>
-	<p>Jon Morehouse is a professional designer, developer and entrepreneur. Jon began programming around the beginning of 2012 and has not looked back. He has decided to change his major to Computer Science at USC and is planning to work the next three years while finishing his undergraduate degree. Jon is a programmer first and enjoys anything development/software engineering related. He is interested in all types of programming, especially infrastructure-optimization, low-level programming and general bash-scripting. His current language of interest is python and he is building anything and everything he can with python.</p>
+	<p>Jon Morehouse is a professional designer, developer and entrepreneur. Jon began programming around the beginning of 2012 and has not looked back. He has decided to change his major to Computer Science at USC and is planning to work the next three years while finishing his undergraduate degree. Jon is a programmer first and enjoys anything development or software-engineering related. He is interested in all types of programming, especially infrastructure-optimization, low-level programming and general bash-scripting. His current language of interest is python and he is building anything and everything he can with python.</p>
 		
 </div>
 
